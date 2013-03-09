@@ -1,0 +1,25 @@
+{
+  "name": "hyperquestionable",
+  "version": "1.0.0",
+  "description": "request's questionable behaviour of aggregrating the body, on top of hyperquest",
+  "main": "hyperquestionable.js",
+  "dependencies": {
+    "hyperquest": "~0.0.3",
+    "once": "~1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nathan7/hyperquestionable.git"
+  },
+  "keywords": [
+    "hyperquest",
+    "request",
+    "http"
+  ],
+  "author": "Nathan Zadoks",
+  "license": "BSD"
+}
