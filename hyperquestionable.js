@@ -11,5 +11,5 @@ function hyperquestionable(url, opts, cb) {
     .on('data', function(chunk) { data += chunk })
     .on('end', function() { cb(null, data, res) })
     .on('error', function(err) { cb(err, data, res) })
-    .on('response', function(_res) { res = _res })
+    .on('response', function(_res) { res = _res, res.resume() })
 }
