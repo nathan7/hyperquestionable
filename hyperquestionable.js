@@ -7,7 +7,7 @@ function hyperquestionable(url, opts, cb) {
   cb = once(cb)
   var data = ''
     , res
-  hyperquest(url)
+  hyperquest(url, opts)
     .on('data', function(chunk) { data += chunk })
     .on('end', function() { cb(null, data, res) })
     .on('error', function(err) { cb(err, data, res) })
