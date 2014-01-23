@@ -1,15 +1,17 @@
 var hyperquest = require('hyperquest')
-  , once = require('once')
+  , concat = require('concat-stream')
 
 module.exports =
 function hyperquestionable(url, opts, cb) {
-  if (typeof opts === 'function') cb = opts, opts = null
-  cb = once(cb)
-  var data = ''
-    , res
-  hyperquest(url, opts)
-    .on('data', function(chunk) { data += chunk })
-    .on('end', function() { cb(null, data, res) })
-    .on('error', function(err) { cb(err, data, res) })
-    .on('response', function(_res) { res = _res, res.resume() })
+  if (typeof opts === 'function') {
+    cb = opts
+    opts = null
+  }
+
+  hyperquest(url, opts, function(err, res) {
+    if (err) return cb(err)
+    concat(res, function(data) {
+      cb(null, res, data)
+    })
+  })
 }
