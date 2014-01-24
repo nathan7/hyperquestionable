@@ -10,8 +10,8 @@ function hyperquestionable(url, opts, cb) {
 
   hyperquest(url, opts, function(err, res) {
     if (err) return cb(err)
-    concat(res, function(data) {
+    res.pipe(concat(function(data) {
       cb(null, res, data)
-    })
+    }))
   })
 }
