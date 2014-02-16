@@ -1,6 +1,6 @@
 {
   "name": "hyperquestionable",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "request's questionable behaviour of aggregrating the body, on top of hyperquest",
   "main": "index.js",
   "dependencies": {
