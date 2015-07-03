@@ -4,8 +4,8 @@
   "description": "request's questionable behaviour of aggregrating the body, on top of hyperquest",
   "main": "index.js",
   "dependencies": {
-    "hyperquest": "~0.2.0",
-    "concat-stream": "~1.4.1"
+    "hyperquest": "^1.2.0",
+    "concat-stream": "^1.5.0"
   },
   "devDependencies": {},
   "scripts": {
